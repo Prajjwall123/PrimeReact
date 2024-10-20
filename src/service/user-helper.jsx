@@ -7,6 +7,13 @@ export const Register = (user) => {
         .then((response) => response.data);
 };
 
+//get all Users
+export const GetAllUsers =(user) =>{
+    return myAxios
+        .get('/user/getAll')
+        .then((response) => response.data)
+}
+
 //get all Roles
 export const GetAllRoles =(roles) =>{
     return myAxios

@@ -25,6 +25,7 @@ export default function AdminTable() {
         GetAllRoles().then((data) => setCustomers(data));
     }, []);
 
+
     const handleConfirm = () => {
         if (roleName.trim() !== '') {
             const roleData = { name: roleName };
@@ -98,6 +99,7 @@ export default function AdminTable() {
 
     return (
         <div>
+            
             <Toast ref={toast} />
             <ConfirmDialog />
             <Dialog header="Role" visible={visible} style={{ width: '50w' }} onHide={resetForm} footer={footerContent}>
